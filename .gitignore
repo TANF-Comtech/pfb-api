@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/pfb_api/__pycache__
+/pfb_api/test/__pycache__
+/__pycache__
+/.vs/pfb-api/FileContentIndex
+/.vs/pfb-api/v17
+/.vs
