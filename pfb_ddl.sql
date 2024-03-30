@@ -1,4 +1,27 @@
 
+-- SCHEMA: pfb
+
+-- DROP SCHEMA IF EXISTS pfb ;
+
+CREATE SCHEMA IF NOT EXISTS pfb
+    AUTHORIZATION postgres;
+
+GRANT ALL ON SCHEMA pfb TO pfb;
+
+GRANT ALL ON SCHEMA pfb TO postgres;
+
+-- Role: pfb
+-- DROP ROLE IF EXISTS pfb;
+
+CREATE ROLE pfb WITH
+  LOGIN
+  NOSUPERUSER
+  INHERIT
+  NOCREATEDB
+  NOCREATEROLE
+  NOREPLICATION
+  ENCRYPTED PASSWORD 'SCRAM-SHA-256$4096:/PFXLPAhnwm2hfWTbQKaBA==$GW7PFRqR7pY1oRRIcxTyS2nawwSX2u3D/3tllnkhrXM=:AIc9LmjkbCa21dgU0TtQMMnNg8zo6iNfizCo2PFnk8Y=';
+
 -- SEQUENCE: pfb.grant_applications_audit_id_seq
 
 -- DROP SEQUENCE IF EXISTS pfb.grant_applications_audit_id_seq;
